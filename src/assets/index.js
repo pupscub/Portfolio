@@ -1,7 +1,22 @@
-import logo from "./logo.svg";
+import A from "./A.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
+import resumeIcon from "./resume-icon.png";
+
+
+import pythonIcon from "./tech/python.png";
+import pytorchIcon from "./tech/pytorch.png";
+import tensorflowIcon from "./tech/tensorflow.png";
+import kerasIcon from "./tech/keras.png";
+import huggingface from "./tech/huggingface.png";
+import fastapiIcon from "./tech/fastapi.png";
+import aws from "./tech/aws.png";
+import kubernetes from "./tech/kubernetes.png";
+import pandas from "./tech/pandas.png";
+import numpy from "./tech/numpy.png";
+import r from "./tech/r.png";
+
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -25,13 +40,20 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
-import carrent from "./carrent.png";
+import mavoix from "./company/Mavoix_logo.png";
+import eai from "./company/EAI_logo.jpeg";
+import northeastern from "./company/northeastern.png";
+import uom from "./company/UoM.jpeg";
+import omdena from "./company/Omdena_logo.png";
+import carrent from "/Users/beast/Documents/Code/portfolio/src/assets/carrent.png";
+import dino from "/Users/beast/Documents/Code/portfolio/src/assets/Dino.png";
+import hcdr from "/Users/beast/Documents/Code/portfolio/src/assets/fintech.jpeg";
+import rag from "/Users/beast/Documents/Code/portfolio/src/assets/PDFChat.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
-  logo,
+  A,
   backend,
   creator,
   mobile,
@@ -57,6 +79,26 @@ export {
   starbucks,
   tesla,
   carrent,
+  dino,
+  hcdr,
+  rag,
   jobit,
   tripguide,
+  eai,
+  mavoix,
+  omdena,
+  resumeIcon,
+  pythonIcon,
+  pytorchIcon,
+  tensorflowIcon,
+  kerasIcon,
+  huggingface,
+  fastapiIcon,
+  aws,
+  kubernetes,
+  pandas,
+  numpy,
+  r,
+  northeastern,
+  uom,
 };

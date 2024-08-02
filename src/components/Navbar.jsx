@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { navLinks, downloadResume } from "../constants";
+import { A, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,11 +41,10 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
-          </p>
+          <img src={A} alt='A' className='w-9 h-9 object-contain' />
+          {/* <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+            Aditya &nbsp;
+          </p> */}
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -58,7 +56,14 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.id === "resume" ? (
+                <button className="flex items-center gap-2 blue-button" onClick={downloadResume}>
+                  <img src={nav.icon} alt="resume icon" className="w-5 h-5" />
+                  {nav.title}
+                </button>
+              ) : (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -88,7 +93,14 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.id === "resume" ? (
+                    <button className="flex items-center gap-2 blue-button" onClick={downloadResume}>
+                      <img src={nav.icon} alt="resume icon" className="w-5 h-5" />
+                      {nav.title}
+                    </button>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Dependency directories
+src/assets/*
+dist/*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
